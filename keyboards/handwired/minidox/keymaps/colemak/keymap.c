@@ -2,13 +2,13 @@
 
 extern keymap_config_t keymap_config;
 
-#define _QWERTY 0
+#define _COLEMAK 0
 #define _LOWER 1
 #define _RAISE 2
 #define _ADJUST 16
 
 enum custom_keycodes {
-    QWERTY = SAFE_RANGE,
+    COLEMAK = SAFE_RANGE,
     LOWER,
     RAISE,
     ADJUST,
@@ -20,8 +20,8 @@ enum custom_keycodes {
 enum {
     TD_Q_TAB = 0, 
     TD_A_BSPC = 1, 
-    TD_P_BSPC = 2, 
-    TD_SCLN_ENT = 3
+    TD_SCLN_BSPC = 2, 
+    TD_O_ENT = 3
 };
 
 // Tap Dance Definitions
@@ -29,8 +29,8 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     //Tap once for Q, twice for Tab
     [TD_Q_TAB]      = ACTION_TAP_DANCE_DOUBLE(KC_Q, KC_TAB),
     [TD_A_BSPC]     = ACTION_TAP_DANCE_DOUBLE(KC_A, KC_BSPC),
-    [TD_P_BSPC]     = ACTION_TAP_DANCE_DOUBLE(KC_P, KC_BSPC),
-    [TD_SCLN_ENT]   = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_ENT)
+    [TD_SCLN_BSPC]  = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_BSPC),
+    [TD_O_ENT]      = ACTION_TAP_DANCE_DOUBLE(KC_O, KC_ENT)
 };
 
 // Fillers to make layering more clear
@@ -44,14 +44,14 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-    [_QWERTY] = LAYOUT(
-        TD(TD_Q_TAB),       KC_W,  KC_E,               KC_R,               KC_T,                              /* left */   KC_LEFT,    KC_Y,          KC_U,               KC_I,               KC_O,   TD(TD_P_BSPC),
-        TD(TD_A_BSPC),      KC_S,  MT(MOD_LALT, KC_D), MT(MOD_LCTL, KC_F), KC_G,                              /* up */     KC_UP,      KC_H,          MT(MOD_RCTL, KC_J), MT(MOD_RALT, KC_K), KC_L,   TD(TD_SCLN_ENT),
-        MT(MOD_LSFT, KC_Z), KC_X,  KC_C,               KC_V,               KC_B,          ENABLE_SELECTOR,    /* right */  KC_RIGHT,   KC_N,          KC_M,               KC_COMM,            KC_DOT, MT(MOD_RSFT, KC_SLSH),
-                                   KC_LGUI,            KC_LCTRL,           LT(1, KC_SPC),                     /* down */   KC_DOWN,    LT(2, KC_DEL), KC_LCTRL,           KC_LALT,
-                                                                                                              /* center */ KC_ENT
-    ),
-
+     [_COLEMAK] = LAYOUT(
+         TD(TD_Q_TAB),       KC_W, KC_F,                KC_P,               KC_G,                       /* left */   KC_LEFT,  KC_J,                KC_L,               KC_U,     KC_Y,   TD(TD_SCLN_BSPC),
+         TD(TD_A_BSPC),      KC_R, MT(MOD_LALT, KC_S),  MT(MOD_LCTL, KC_T), KC_D,                       /* up */     KC_UP,    MT(MOD_RALT, KC_H),  MT(MOD_RCTL, KC_N), KC_E,     KC_I,   TD(TD_O_ENT),
+         MT(MOD_LSFT, KC_Z), KC_X, KC_C,                KC_V,               KC_B,   ENABLE_SELECTOR,    /* right */  KC_RIGHT, KC_K,                KC_M,               KC_COMM,  KC_DOT, MT(MOD_RSFT, KC_SLSH),
+                                   KC_LGUI, KC_LCTRL, LT(1, KC_SPC),                                    /* down */   KC_DOWN,  LT(2, KC_DEL),       KC_LCTRL,           KC_LALT, 
+                                                                                                        /* center */ KC_ENT
+     ),
+    
     [_LOWER] = LAYOUT(
         KC_GESC, _______, KC_LPRN, KC_RPRN, _______,                _______, KC_CIRC, KC_LABK, KC_UP,   KC_RABK,  MT(KC_EXLM, KC_AMPR),
         _______, _______, KC_LBRC, KC_RBRC, _______,                _______, KC_PERC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOTE,
@@ -113,10 +113,10 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
 {
     switch (keycode) 
     {
-        case QWERTY:
+        case COLEMAK:
             if (record->event.pressed) 
             {
-                set_single_persistent_default_layer(_QWERTY);
+                set_single_persistent_default_layer(_COLEMAK);
             }
             return false;
             break;
