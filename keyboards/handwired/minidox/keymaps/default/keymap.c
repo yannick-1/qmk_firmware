@@ -33,7 +33,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_SCLN_ENT]   = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_ENT)
 };
 
-// Fillers to make layering more clear
+// Fillers to make layering more cle
 #define _______ KC_TRNS
 #define XXXXXXX KC_NO
 
@@ -45,11 +45,11 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_QWERTY] = LAYOUT(
-        TD(TD_Q_TAB),       KC_W,  KC_E,               KC_R,               KC_T,                              /* left */   KC_LEFT,    KC_Y,          KC_U,               KC_I,               KC_O,   TD(TD_P_BSPC),
-        TD(TD_A_BSPC),      KC_S,  MT(MOD_LALT, KC_D), MT(MOD_LCTL, KC_F), KC_G,                              /* up */     KC_UP,      KC_H,          MT(MOD_RCTL, KC_J), MT(MOD_RALT, KC_K), KC_L,   TD(TD_SCLN_ENT),
-        MT(MOD_LSFT, KC_Z), KC_X,  KC_C,               KC_V,               KC_B,          ENABLE_SELECTOR,    /* right */  KC_RIGHT,   KC_N,          KC_M,               KC_COMM,            KC_DOT, MT(MOD_RSFT, KC_SLSH),
-                                   KC_LGUI,            KC_LCTRL,           LT(1, KC_SPC),                     /* down */   KC_DOWN,    LT(2, KC_DEL), KC_LCTRL,           KC_LALT,
-                                                                                                              /* center */ KC_ENT
+        KC_Q,                KC_W,  KC_E,               KC_R,               KC_T,                                /* left */   KC_LEFT,    KC_Y,               KC_U,               KC_I,               KC_O,   KC_P,
+        KC_A,                KC_S,  MT(MOD_LALT, KC_D), MT(MOD_LCTL, KC_F), MT(MOD_LGUI, KC_G),                  /* up */     KC_UP,      MT(MOD_LGUI, KC_H), MT(MOD_RCTL, KC_J), MT(MOD_RALT, KC_K), KC_L,   KC_SCLN,
+        MT(MOD_LSFT,  KC_Z), KC_X,  KC_C,               KC_V,               KC_B,               ENABLE_SELECTOR, /* right */  KC_RIGHT,   KC_N,               KC_M,               KC_COMM,            KC_DOT, MT(MOD_RSFT, KC_SLSH),
+                                    KC_TAB,             KC_BSPC,            LT(1, KC_SPC),                       /* down */   KC_DOWN,    LT(2, KC_DEL),      KC_ENT,             KC_BSPC,
+                                                                                                                 /* center */ KC_ENT
     ),
 
     [_LOWER] = LAYOUT(
@@ -61,11 +61,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_RAISE] = LAYOUT(
-        KC_F1,  KC_F2,  KC_F3,   KC_F4,   KC_F5,                    KC_MPRV, KC_MPLY,  KC_7,    KC_8,    KC_9, _______,
-        KC_F6,  KC_F7,  KC_F8,   KC_F9,   KC_F10,                   KC_VOLU, KC_MUTE,  KC_4,    KC_5,    KC_6, _______,
-        KC_F11, KC_F12, _______, _______, _______,   _______,       KC_MFFD, KC_0,     KC_1,    KC_2,    KC_3, _______, 
-                        _______, _______, _______,                  KC_VOLD, _______,  _______, _______,
-                                                                    _______
+        KC_EXLM, KC_AT,  KC_HASH,  KC_DLR,  KC_PERC,                 KC_MPRV, KC_MPLY,  KC_7,    KC_8,    KC_9, _______,
+        KC_F1,   KC_F2,  KC_F3,    KC_F4,   KC_F5,                   KC_VOLU, KC_MUTE,  KC_4,    KC_5,    KC_6, _______,
+        KC_F6,   KC_F7,  KC_F8,    KC_F9,   KC_F10,   _______,       KC_MFFD, KC_0,     KC_1,    KC_2,    KC_3, _______, 
+                         KC_F11,   KC_F12,  _______,                 KC_VOLD, _______,  _______, _______,
+                                                                     _______
     ),
 
     [_ADJUST] = LAYOUT(
@@ -98,11 +98,11 @@ void encoder_update_user(uint8_t index, bool clockwise)
         {
             if (clockwise) 
             {
-                tap_code(KC_UP);
-            } 
+                tap_code(KC_DOWN);
+        } 
             else 
             {
-                tap_code(KC_DOWN);
+                tap_code(KC_UP);
             }
         }
     }

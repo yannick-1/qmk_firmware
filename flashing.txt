@@ -1,6 +1,6 @@
 make handwired/dactyl_manuform/5x6:colemak:avrdude
 make handwired/minidox:default:avrdude
-make keebio/iris ..
+make keebio/iris/rev2:linux:avrdude
 make orthodox:colemak ...
 
 RST + GND twice
