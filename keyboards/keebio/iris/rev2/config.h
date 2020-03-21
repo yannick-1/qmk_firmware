@@ -62,5 +62,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGBLED_NUM 12    // Number of LEDs
 
 /* Tap dance options */
-#define TAPPING_TERM 175
+// #define TAPPING_TERM 175
+
+// /* Encoder definitions */
+#define ENCODERS_PAD_A { F4 }
+#define ENCODERS_PAD_B { F5 }
+#define ENCODER_RESOLUTION 4
 
