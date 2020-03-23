@@ -60,11 +60,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_LOWER] = LAYOUT(
-        KC_GRAVE, _______, _______, _______, _______, _______,                       _______, _______, _______, _______,  _______,  _______,
-        KC_GRAVE, _______, _______, KC_LPRN, KC_RPRN, _______,   		             KC_CIRC, KC_LABK, KC_UP  , KC_RABK,  KC_AMPR,  KC_BSLS,
-        _______,  _______, _______, KC_LBRC, KC_RBRC, _______,       		     	 KC_PERC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOTE, KC_EXLM,
-        _______,  _______, _______, KC_LCBR, KC_RCBR, _______, _______,     _______, KC_EQL , KC_PPLS, KC_PMNS, KC_PAST,  KC_PSLS,  KC_UNDS,
-                                             RESET,   _______, _______,     _______, _______, _______ 
+        KC_GRAVE, _______, _______, _______, _______, _______,                         _______, _______, _______, _______,  _______,  _______,
+        KC_GRAVE, _______, _______, KC_LPRN, KC_RPRN, _______,   		               KC_CIRC, KC_LABK, KC_UP  , KC_RABK,  KC_AMPR,  KC_BSLS,
+        _______,  _______, _______, KC_LBRC, KC_RBRC, KC_PGUP,       		     	   KC_PERC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOTE, KC_EXLM,
+        _______,  _______, _______, KC_LCBR, KC_RCBR, KC_PGDOWN, _______,     _______, KC_EQL , KC_PPLS, KC_PMNS, KC_PAST,  KC_PSLS,  KC_UNDS,
+                                             RESET,   _______,   _______,     _______, _______, _______
     ),
 
     [_RAISE] = LAYOUT(
