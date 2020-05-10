@@ -1,8 +1,6 @@
-
 #pragma once
 
 #include "config_common.h"
-
 
 #define PRODUCT         Dactyl-Manuform (5x6)
 
@@ -17,9 +15,6 @@
 
 #define DIODE_DIRECTION COL2ROW
 
-/* define if matrix has ghost */
-//#define MATRIX_HAS_GHOST
-
-/* number of backlight levels */
-// #define BACKLIGHT_LEVELS 3
-
+#define RGB_DI_PIN D3
+#define RGBLED_NUM 16
+#define RGBLED_SPLIT { 8, 8 }
