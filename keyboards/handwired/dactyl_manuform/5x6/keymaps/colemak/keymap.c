@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_Z,   KC_X,    KC_C,     KC_V,    KC_B,
                          KC_LBRC, KC_RBRC,
                                             KC_0,    KC_SPC,
-                                            KC_COMM, LT(_GAME_2, KC_ENT),
+                                            KC_9, LT(_GAME_2, KC_ENT),
                                             KC_INS,  KC_END,
 
         _______, _______, _______, _______, _______, _______,
@@ -106,7 +106,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_B,     KC_N,   KC_M,    KC_COMM,  KC_DOT,  KC_SLSH,
                           KC_LEFT, KC_RIGHT,
                                              _______, _______,
-                                             _______, _______,
+                                             KC_COMM, _______,
                                              _______, _______,
 
         _______, _______, _______, _______, _______, _______,
