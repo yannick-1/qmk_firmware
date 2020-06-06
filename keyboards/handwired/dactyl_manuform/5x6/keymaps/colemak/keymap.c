@@ -1,4 +1,3 @@
-
 #include QMK_KEYBOARD_H
 
 extern keymap_config_t keymap_config;
@@ -16,6 +15,14 @@ extern keymap_config_t keymap_config;
 #define GAME    TG(_GAME_1)
 
 #define _______ KC_TRNS
+
+enum {
+    TD_C9 = 0
+};
+
+qk_tap_dance_action_t tap_dance_actions[] = {
+    [TD_C9] = ACTION_TAP_DANCE_DOUBLE(KC_9, KC_COMMA)
+};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -86,7 +93,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_Z,   KC_X,    KC_C,     KC_V,    KC_B,
                          KC_LBRC, KC_RBRC,
                                             KC_0,    KC_SPC,
-                                            KC_9, LT(_GAME_2, KC_ENT),
+                                            TD(TD_C9), LT(_GAME_2, KC_ENT),
                                             KC_INS,  KC_END,
 
         _______, _______, _______, _______, _______, _______,

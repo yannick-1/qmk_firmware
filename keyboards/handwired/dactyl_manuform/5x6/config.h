@@ -18,3 +18,6 @@
 #define RGB_DI_PIN D3
 #define RGBLED_NUM 16
 #define RGBLED_SPLIT { 8, 8 }
+
+#define TAPPING_TERM 175
+
