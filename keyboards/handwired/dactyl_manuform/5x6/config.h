@@ -19,5 +19,5 @@
 #define RGBLED_NUM 16
 #define RGBLED_SPLIT { 8, 8 }
 
-#define TAPPING_TERM 175
+#define TAPPING_TERM 275
 
