@@ -17,7 +17,7 @@
 
 
 /* Tap dance options */
-#define TAPPING_TERM 150 
+#define TAPPING_TERM 175 
 
 #undef RGBLED_NUM
 #define RGBLIGHT_ANIMATIONS
