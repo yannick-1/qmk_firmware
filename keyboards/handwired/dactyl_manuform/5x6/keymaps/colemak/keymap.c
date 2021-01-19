@@ -17,11 +17,13 @@ extern keymap_config_t keymap_config;
 #define _______ KC_TRNS
 
 enum {
-    TD_C9 = 0
+    TD_9C = 0,
+    /* TD_F1F2 = 1 */
 };
 
 qk_tap_dance_action_t tap_dance_actions[] = {
-    [TD_C9] = ACTION_TAP_DANCE_DOUBLE(KC_9, KC_COMMA)
+    [TD_9C] = ACTION_TAP_DANCE_DOUBLE(KC_9, KC_COMMA),
+    /* [TD_F1F2] = ACTION_TAP_DANCE_DOUBLE(KC_A, KC_B), */
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -93,7 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT, KC_Z,   KC_X,    KC_C,     KC_V,    KC_B,
                          KC_LBRC, KC_RBRC,
                                             KC_0,    KC_SPC,
-                                            TD(TD_C9), LT(_GAME_2, KC_ENT),
+                                            TD(TD_9C), LT(_GAME_2, KC_F1),
                                             KC_INS,  KC_END,
 
         _______, _______, _______, _______, _______, _______,
@@ -112,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_G,     KC_H,   KC_J,    KC_K,     KC_L,    KC_SCLN,
         KC_B,     KC_N,   KC_M,    KC_COMM,  KC_DOT,  KC_SLSH,
                           KC_LEFT, KC_RIGHT,
-                                             _______, _______,
+                                             _______, KC_F2,
                                              KC_COMM, _______,
                                              _______, _______,
 
