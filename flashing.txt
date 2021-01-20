@@ -1,3 +1,5 @@
+Use sudo
+
 make handwired/dactyl_manuform/5x6:colemak:avrdude
 make handwired/minidox:linux:avrdude
 make keebio/iris/rev2:linux:avrdude
