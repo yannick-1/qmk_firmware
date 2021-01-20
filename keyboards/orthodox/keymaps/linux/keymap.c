@@ -36,21 +36,21 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_COLEMAK] = LAYOUT(\
-        TD(TD_TAB_GESC), KC_Q, KC_W, KC_E, KC_R, KC_T,                                                                                                   KC_Y, KC_U, KC_I,    KC_O,   KC_P,     KC_BSPC,  \
-        KC_BSPC,         KC_A, KC_S, KC_D, KC_F, KC_G,          KC_LGUI,      KC_PGUP,                   KC_PGDOWN,                 KC_LALT,               KC_H, KC_J, KC_K,    KC_L,   KC_SCLN,  KC_ENT,   \
-        KC_LSFT,         KC_Z, KC_X, KC_C, KC_V, KC_B, KC_LGUI, LT(1,KC_SPC), MT(MOD_LCTL, KC_PGUP),     MT(MOD_RCTL, KC_PGDOWN),   LT(2,KC_DEL), KC_LALT, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLASH, KC_RSFT   \
+        TD(TD_TAB_GESC), KC_Q, KC_W, KC_E, KC_R, KC_T,                                                                                                         KC_Y, KC_U, KC_I,    KC_O,   KC_P,     KC_BSPC,  \
+        KC_BSPC,         KC_A, KC_S, KC_D, KC_F, KC_G,                        KC_LGUI,      KC_PGUP,         KC_PGDOWN, KC_LALT,                               KC_H, KC_J, KC_K,    KC_L,   KC_SCLN,  KC_ENT,   \
+        KC_LSFT,         KC_Z, KC_X, KC_C, KC_V, KC_B, MT(MOD_LGUI, KC_PGUP), LT(1,KC_SPC), KC_LCTL,         KC_RCTL,   LT(2,KC_DEL), MT(MOD_LALT, KC_PGDOWN), KC_N, KC_M, KC_COMM, KC_DOT, KC_SLASH, KC_RSFT   \
     ),
 
     [_LAYER_1] = LAYOUT(\
-        KC_GESC, _______, _______, KC_LPRN, KC_RPRN, _______,                                                             KC_CIRC, KC_LABK, KC_UP,   KC_RABK,  KC_AMPR,  KC_BSLS,  \
-        _______, _______, _______, KC_LBRC, KC_RBRC, KC_PGUP,            _______, _______,     _______, _______,          KC_PERC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOT,  KC_EXLM,  \
-        _______, _______, _______, KC_LCBR, KC_RCBR, KC_PGDOWN, _______, _______, RESET,       KC_END,  _______, _______, KC_EQL,  KC_PLUS, KC_MINS, KC_ASTR,  KC_SLASH, KC_UNDS   \
+        KC_GESC, _______, _______, KC_LPRN, KC_RPRN, _______,                                                            KC_CIRC, KC_LABK, KC_UP,   KC_RABK,  KC_AMPR,  KC_BSLS,  \
+        _______, _______, _______, KC_LBRC, KC_RBRC, KC_PGUP,            _______, _______,     _______, _______,         KC_PERC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOT,  KC_EXLM,  \
+        _______, _______, _______, KC_LCBR, KC_RCBR, KC_PGDOWN, _______, _______, RESET,       _______, _______, KC_END, KC_EQL,  KC_PLUS, KC_MINS, KC_ASTR,  KC_SLASH, KC_UNDS   \
     ),
 
     [_LAYER_2] = LAYOUT(\
         KC_GESC, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                                                           _______,  KC_7, KC_8, KC_9, KC_VOLU, KC_MNXT,  \
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,            KC_F11,  KC_F12,      _______, _______,          _______,  KC_4, KC_5, KC_6, KC_VOLD, KC_MPLY,  \
-        _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______, _______, KC_HOME,     _______, _______, _______, KC_0,     KC_1, KC_2, KC_3, KC_MUTE, KC_MPRV   \
+        _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_HOME, _______, _______,     _______, _______, _______, KC_0,     KC_1, KC_2, KC_3, KC_MUTE, KC_MPRV   \
     ),
 
     [_ADJUST] =  LAYOUT(\
