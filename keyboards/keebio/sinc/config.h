@@ -20,7 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
-#define ENCODERS_PAD_A {}
-#define ENCODERS_PAD_B {}
+/* #define ENCODERS_PAD_A {} // F5 */
+/* #define ENCODERS_PAD_B {} // F6 */
 #define ENCODER_RESOLUTION 4
 
