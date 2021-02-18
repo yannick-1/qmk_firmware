@@ -19,3 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 #include "config_common.h"
+
+#define ENCODERS_PAD_A {}
+#define ENCODERS_PAD_B {}
+#define ENCODER_RESOLUTION 4
+
