@@ -2,6 +2,11 @@
 
 #include "config_common.h"
 
+<<<<<<< HEAD
+=======
+#define PRODUCT_ID      0x3536
+#define DEVICE_VER      0x0001
+>>>>>>> 890f3a57b61c53538da8f669146097d9399d3f11
 #define PRODUCT         Dactyl-Manuform (5x6)
 
 /* key matrix size */

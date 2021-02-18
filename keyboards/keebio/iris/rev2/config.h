@@ -19,11 +19,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xCB10
-#define PRODUCT_ID      0x1256
+#define PRODUCT_ID      0x2256
 #define DEVICE_VER      0x0200
 #define MANUFACTURER    Keebio
-#define PRODUCT         Iris Keyboard
-#define DESCRIPTION     Split 50 percent ergonomic keyboard
+#define PRODUCT         Keebio Iris Rev. 2
 
 /* key matrix size */
 // Rows are doubled-up
@@ -60,6 +59,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 /* ws2812 RGB LED */
 #define RGB_DI_PIN D3
 #define RGBLED_NUM 12    // Number of LEDs
+<<<<<<< HEAD
 
 /* Tap dance options */
 // #define TAPPING_TERM 175
@@ -69,3 +69,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ENCODERS_PAD_B { F5 }
 #define ENCODER_RESOLUTION 4
 
+=======
+#define RGBLED_SPLIT { 6, 6 }
+#define RGBLIGHT_ANIMATIONS
+>>>>>>> 890f3a57b61c53538da8f669146097d9399d3f11
