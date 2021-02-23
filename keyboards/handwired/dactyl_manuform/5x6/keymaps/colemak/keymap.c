@@ -58,9 +58,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                              _______, _______,
                                              _______, RESET,
 
-        _______, _______, _______, _______,  _______,  _______, // Using HJKL as movement alternative:
-        KC_CIRC, KC_LABK, KC_UP,   KC_RABK,  KC_AMPR,  KC_BSLS, // ^,    &,    %,  <,    >
-        KC_PERC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOTE, KC_EXLM, // left, down, up, right
+        _______, _______, _______, _______,  _______,  _______, 
+        KC_CIRC, KC_LABK, KC_UP,   KC_RABK,  KC_AMPR,  KC_BSLS,
+        KC_PERC, KC_LEFT, KC_DOWN, KC_RIGHT, KC_QUOTE, KC_EXLM,
         KC_EQL,  KC_PPLS, KC_PMNS, KC_PAST,  KC_PSLS,  KC_UNDS,
                           _______, _______,
         _______, _______,
@@ -98,7 +98,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                             TD(TD_9C), LT(_GAME_2, KC_F1),
                                             KC_INS,  KC_END,
 
-        _______, _______, _______, _______, _______, _______,
+        KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
         _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______,
